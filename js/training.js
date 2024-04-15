@@ -20,11 +20,12 @@ document.addEventListener('scroll', function(event){
 /* --- Exercice 3 --- */
 
 document.querySelector("#button3").addEventListener('click', function (event) {
-    document.querySelector("#ex3-animals")
+    let firstChild = document.querySelector("#ex3-animals li");
+    document.querySelector("#ex3-animals").appendChild(firstChild);
 })
 
 console.log(document.querySelector("#button3"));
-console.log(document.querySelector("#ex3-animals"));
+console.log(document.querySelector("#ex3-animals li"));
 
 /* ------------------------------------ */
 /* --- Exercice 4 --- */
