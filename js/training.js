@@ -8,27 +8,20 @@ document.querySelector("#button1").addEventListener('click', function (event) {
 /* ------------------------------------ */
 /* --- Exercice 2 --- */
 
-let exercice2 = document.querySelector("#ex2-scroll-value");
-console.log(exercice2);
-
-
 document.addEventListener('scroll', function(event){
-    exercice2.innerText = Math.floor(window.scrollY);
+    document.querySelector("#ex2-scroll-value").innerText = Math.floor(window.scrollY);
 })
 
 /* ------------------------------------ */
 /* --- Exercice 3 --- */
 
 document.querySelector("#button3").addEventListener('click', function (event) {
-    let firstChild = document.querySelector("#ex3-animals li");
-    document.querySelector("#ex3-animals").appendChild(firstChild);
+    document.querySelector("#ex3-animals").appendChild(document.querySelector("#ex3-animals li"));
 })
-
-console.log(document.querySelector("#button3"));
-console.log(document.querySelector("#ex3-animals li"));
 
 /* ------------------------------------ */
 /* --- Exercice 4 --- */
+
 
 
 /* ------------------------------------ */
