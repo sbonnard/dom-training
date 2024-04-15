@@ -7,10 +7,8 @@ const button1 = document.querySelector("section div button");
 console.log(button1);
 
 button1.addEventListener('click', function (event) {
-    text.remove(event)
+    text.classList.toggle('text')
 });
-
-// text.remove()
 
 /* ------------------------------------ */
 /* --- Exercice 2 --- */
