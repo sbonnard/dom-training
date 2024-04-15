@@ -13,6 +13,10 @@ button1.addEventListener('click', function (event) {
 /* ------------------------------------ */
 /* --- Exercice 2 --- */
 
+let y = window.scrollY;
+let exercice2 = document.querySelector("#ex2-scroll-value");
+console.log(exercice2);
+exercice2.innerHTML = y;
 
 /* ------------------------------------ */
 /* --- Exercice 3 --- */
