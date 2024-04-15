@@ -1,14 +1,9 @@
 /* ------------------------------------ */
 /* --- Exercice 1 --- */
 
-const text = document.querySelector("section div #exercice-1");
-console.log(text);
-const button1 = document.querySelector("section div button");
-console.log(button1);
-
-button1.addEventListener('click', function (event) {
-    text.classList.toggle('text')
-});
+document.querySelector("#button1").addEventListener('click', function(event){
+    document.querySelector("#text1").classList.toggle('text-hidden')
+})
 
 /* ------------------------------------ */
 /* --- Exercice 2 --- */
@@ -16,7 +11,8 @@ button1.addEventListener('click', function (event) {
 let y = window.scrollY;
 let exercice2 = document.querySelector("#ex2-scroll-value");
 console.log(exercice2);
-exercice2.innerHTML = y;
+
+    exercice2.innerHTML = y;
 
 /* ------------------------------------ */
 /* --- Exercice 3 --- */
