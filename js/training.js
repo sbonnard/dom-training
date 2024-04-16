@@ -22,8 +22,9 @@ document.querySelector("#button3").addEventListener('click', function (event) {
 /* ------------------------------------ */
 /* --- Exercice 4 --- */
 
+let clickCounter = 0;
+
 document.querySelector("#button4").addEventListener('click', function (event) {
-    let clickCounter = 0;
     clickCounter += 1;
     if (clickCounter === 1) {
         document.querySelector("#button4").classList.add('btn--blue')
@@ -39,15 +40,17 @@ document.querySelector("#button4").addEventListener('click', function (event) {
 /* ------------------------------------ */
 /* --- Exercice 5 --- */
 
-// mouseover
+function changeBackgroundColour(event) {
+    let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+    let rgbValue = "#" + randomColor;
+    event.target.style.backgroundColor = rgbValue;
+}
 
-document.querySelectorAll("#mouse-over-exercice li .js-btn")
+const ex5 = document.querySelectorAll(".js-btn");
 
-    for (const index of document.querySelectorAll("#mouse-over-exercice li .js-btn")) {
-        addEventListener('mouseover', function (event){
-            let randomColor = Math.floor(Math.random()*16777215).toString(16);
-            let rgbValue = "#" + randomColor;
-            document.querySelector("#mouse-over-exercice li .js-btn").style.backgroundColor = rgbValue;
+for (const btn of ex5) {
+    btn.addEventListener('mouseover', function (event) {
+        changeBackgroundColour(event)
     })
 };
 
