@@ -40,6 +40,10 @@ document.querySelector("#button4").addEventListener('click', function (event) {
 /* ------------------------------------ */
 /* --- Exercice 5 --- */
 
+/**
+ * Change background color of an element in a addEventListener context.
+ * @param {event} event 
+ */
 function changeBackgroundColour(event) {
     let randomColor = Math.floor(Math.random() * 16777215).toString(16);
     let rgbValue = "#" + randomColor;
