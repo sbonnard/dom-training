@@ -1,3 +1,15 @@
 .text-hidden {
     display: none;
 }
+
+.btn--blue {
+    background-color: blue;
+}
+
+.btn--red {
+    background-color: red;
+}
+
+.btn--green{
+    background-color: green;
+}
