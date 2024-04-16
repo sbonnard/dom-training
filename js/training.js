@@ -49,7 +49,7 @@ document.querySelector("#button4").addEventListener('click', function (event) {
  * @param {event} event 
  */
 function changeBackgroundColour(event) {
-    let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+    let randomColor = Math.floor(Math.random() * 256 ** 3).toString(16);
     let rgbValue = "#" + randomColor;
     event.target.style.backgroundColor = rgbValue;
 }
@@ -62,15 +62,53 @@ for (const btn of ex5) {
     })
 };
 
-console.log(document.querySelectorAll("#mouse-over-exercice li .js-btn"));
+// console.log(document.querySelectorAll("#mouse-over-exercice li .js-btn"));
 
-console.log(document.querySelector("#mouse-over-exercice li .js-btn"));
+// console.log(document.querySelector("#mouse-over-exercice li .js-btn"));
 
+// function randomColor(){
+//     colorValue = Math.floor(Math.random() * (256 ** 3))
+//    return '#' + colorValue.toString(16)
+// }
+
+// const btnsEx5 = document.querySelectorAll('#ex5 [type=button]')
+// console.log(btnsEx5);
+
+// for(const btn of btnsEx5){
+//    console.log(randomColor());
+//    btn.addEventListener('pointerenter', function (e){
+//        e.target.style.backgroundColor = randomColor();
+//    })
+//    btn.addEventListener('pointerout', function (e){
+//        e.target.style.backgroundColor = ''; })
+// }
 
 /* ------------------------------------ */
 /* --- Exercice 6 --- */
 
+const text = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae porro officia eos tenetur voluptate consectetur unde quo veritatis architecto ullam labore ea sit inventore saepe dolorem maxime nam, nisi quod.'
 
+/**
+ * Splits a text in words and letters.
+ * @param {string} text - The text you want to split words from.
+ * @returns {array} - The array containing each letters and spaces that compose a text.
+ */
+function splitWords(text) {
+    const arrayText = text.split('');
+    return arrayText
+}
+
+
+
+console.log(splitWords(text));
+
+
+
+const textEx6 = document.querySelector('#ex6-paragraph');
+
+console.log(document.querySelector('#ex6-paragraph'));
+
+// function splitText
 
 /* ------------------------------------ */
 /* --- Exercice 7 --- */
