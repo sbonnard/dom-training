@@ -25,16 +25,20 @@ document.querySelector("#button3").addEventListener('click', function (event) {
 let clickCounter = 0;
 
 document.querySelector("#button4").addEventListener('click', function (event) {
-    clickCounter += 1;
+    if (clickCounter === 0) {
+        document.querySelector("#button4").classList.remove('btn--green');
+        document.querySelector("#button4").classList.add('btn--blue');
+
+    }
     if (clickCounter === 1) {
-        document.querySelector("#button4").classList.add('btn--blue')
+        document.querySelector("#button4").classList.replace('btn--blue', 'btn--red')
     }
     if (clickCounter === 2) {
-        document.querySelector("#button4").classList.add('btn--red')
+        document.querySelector("#button4").classList.replace('btn--red','btn--green')
+        clickCounter = -1;
     }
-    if (clickCounter === 3) {
-        document.querySelector("#button4").classList.add('btn--green')
-    }
+
+    clickCounter += 1;
 });
 
 /* ------------------------------------ */
