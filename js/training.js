@@ -34,7 +34,7 @@ document.querySelector("#button4").addEventListener('click', function (event) {
         document.querySelector("#button4").classList.replace('btn--blue', 'btn--red')
     }
     if (clickCounter === 2) {
-        document.querySelector("#button4").classList.replace('btn--red','btn--green')
+        document.querySelector("#button4").classList.replace('btn--red', 'btn--green')
         clickCounter = -1;
     }
 
@@ -89,7 +89,7 @@ for (const btn of ex5) {
 const text = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae porro officia eos tenetur voluptate consectetur unde quo veritatis architecto ullam labore ea sit inventore saepe dolorem maxime nam, nisi quod.'
 
 /**
- * Splits a text in words and letters.
+ * Splits a text in letters.
  * @param {string} text - The text you want to split words from.
  * @returns {array} - The array containing each letters and spaces that compose a text.
  */
@@ -98,7 +98,12 @@ function splitWords(text) {
     return arrayText
 }
 
+function getIntervalApparitionText(text) {
+    let i = 0;
+        setInterval(splitWords(text)[i], 1111111000)
+    }
 
+console.log(getIntervalApparitionText(text));
 
 console.log(splitWords(text));
 
