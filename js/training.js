@@ -98,20 +98,35 @@ function splitWords(text) {
     return arrayText
 }
 
-function getIntervalApparitionText(text) {
-    let i = 0;
-        setInterval(splitWords(text)[i], 1111111000)
-    }
+/**
+ * Animate text letter by letter with time interval.
+ * @param {element} element - DOM element containing text to animate
+ */
+function animateText(element) {
+    const textContent = element.innerText.split('');
+    element.textContent = "";
+    let index = 0;
+    const interval = setInterval(() => {
+        if (index >= textContent.length) {
+            clearInterval(interval);
+            return;
+        }
 
-console.log(getIntervalApparitionText(text));
+        element.textContent += textContent[index];
+        index++;
+    }, 50);
+}
 
-console.log(splitWords(text));
+// animateText(document.getElementById('ex6-paragraph'));
 
+// METHOD 2
+const element = document.getElementById('ex6-paragraph');
+const chars = element.innerText.split('');
+element.textContent = "";
 
-
-const textEx6 = document.querySelector('#ex6-paragraph');
-
-console.log(document.querySelector('#ex6-paragraph'));
+chars.forEach((letter, i) => {
+    setTimeout(() => element.textContent += letter, i * 50);
+});
 
 // function splitText
 
@@ -127,6 +142,53 @@ const taskList = [
     "🌳 Tondre la pelouse"
 ];
 
+/**
+ * Create task element from template and adds it to list.
+ * @param {string} taskText - Text you want to create from template.
+ * @returns {element} Element created and displayed in the DOM.
+ */
+function addTask(taskText) {
+    const taskElement = document.importNode(document.getElementById('task-template').content, true);
+    taskElement.querySelector('.js-task').innerText = taskText;
+    const listElement = document.querySelector('#ex7-list');
+    listElement.appendChild(taskElement);
+    return listElement.lastElementChild;
+}
+
+/**
+ * Gets a task from a list and puts this task at the end.
+ * @param {array} taskList - Array of strings
+ * @returns {string} The first element from the array.
+ */
+function getTaskFromList(taskList) {
+    const firstElement = taskList.shift();
+    taskList.push(firstElement);
+    return firstElement;
+}
+
+
+document.getElementById('ex7-button')
+    .addEventListener('click', function () {
+        const element = addTask(getTaskFromList(taskList));
+
+        // METHOD 2 - Replace event handler below.
+        // element.addEventListener('click', function(event) {
+        //     this.remove();
+        // })
+    });
+
+// METHOD 1
+document.getElementById('ex7-list')
+    .addEventListener('click', function (event) {
+        const clickedTask = event.target;
+        if (clickedTask.classList.contains('js-task')) {
+            clickedTask.remove();
+        }
+    });
 
 /* ------------------------------------ */
 /* --- Exercice 8 --- */
+
+console.log(document.querySelector('#ex8-button-level'));
+
+console.log(document.querySelector('.progress-val-level'));
