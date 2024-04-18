@@ -26,52 +26,44 @@ const project6 = document.querySelector('[data-title="Focus event on form elemen
 
 const image = document.getElementById('gallery-picture');
 
+/**
+ * Displays the project thanks to a function's external eventListener.
+ * @param {element} alt - The alt element of the project's image.
+ * @param {string} imgSrc - The source of the project's image.
+ * @param {string} projectNumber - The description of the project found through its ID.
+ */
+function displayProject(alt, imgSrc, projectNumber){
+    document.getElementById('gallery-title').textContent = document.querySelector(alt).alt;
+    image.src = imgSrc;
+    document.getElementById('gallery-description').textContent = document.getElementById(projectNumber).dataset['description'];
+}
+
 // Projet 1
 project1.addEventListener('mouseover', function () {
-    document.getElementById('gallery-title').textContent = document.querySelector('[alt="Projet 1"]').alt;
-    image.src = "img/project-1.jpg";
-    document.getElementById('gallery-description').textContent = document.getElementById('project-1').dataset['description'];
+    displayProject('[alt="Projet 1"]', "img/project-1.jpg", 'project-1')
 });
 
 // Projet 2
 project2.addEventListener('mouseover', function () {
-    document.getElementById('gallery-title').textContent = document.querySelector('[alt="Projet 2"]').alt;
-    image.src = "img/project-2.jpg";
-    document.getElementById('gallery-description').textContent = document.getElementById('project-2').dataset['description'];
+    displayProject('[alt="Projet 2"]', "img/project-2.jpg", 'project-2')
 });
 
 // Projet 3
 project3.addEventListener('mouseover', function () {
-    document.getElementById('gallery-title').textContent = document.querySelector('[alt="Projet 3"]').alt;
-    image.src = "img/project-3.jpg";
-    document.getElementById('gallery-description').textContent = document.getElementById('project-3').dataset['description'];
+    displayProject('[alt="Projet 3"]', "img/project-3.jpg", 'project-3')
 });
 
 // Projet 4
 project4.addEventListener('mouseover', function () {
-    document.getElementById('gallery-title').textContent = document.querySelector('[alt="Projet 4"]').alt;
-    image.src = "img/project-4.jpg";
-    document.getElementById('gallery-description').textContent = document.getElementById('project-4').dataset['description'];
+    displayProject('[alt="Projet 4"]', "img/project-4.jpg", 'project-4')
 });
 
 // Projet 5
 project5.addEventListener('mouseover', function () {
-    document.getElementById('gallery-title').textContent = document.querySelector('[alt="Projet 5"]').alt;
-    image.src = "img/project-5.jpg";
-    document.getElementById('gallery-description').textContent = document.getElementById('project-5').dataset['description'];
+    displayProject('[alt="Projet 5"]', "img/project-5.jpg", 'project-5')
 });
 
 // Projet 6
 project6.addEventListener('mouseover', function () {
-    document.getElementById('gallery-title').textContent = document.querySelector('[alt="Projet 6"]').alt;
-    image.src = "img/project-6.jpg";
-    document.getElementById('gallery-description').textContent = document.getElementById('project-6').dataset['description'];
+    displayProject('[alt="Projet 6"]', "img/project-6.jpg", 'project-6')
 });
-
-
-
-
-
-
-
-

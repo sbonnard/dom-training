@@ -11,7 +11,6 @@ const articleTab4 = document.getElementById("tabs-tab4");
 
 /* 2 boucles for par listener
 deux tableaux
-une fonction add
 listener sur le ul */
 
 /**
@@ -28,11 +27,11 @@ function switchToActive(tabNumber, tabArticle) {
 /**
  * Sets the tabs and articles to inactive.
  * @param {string} tabNumberA - A tab you want to set as inactive.
- * @param {string} tabNumberB - A tab you want to set as inactive.
- * @param {string} tabNumberC - A tab you want to set as inactive.
- * @param {string} articleA - An article you want to set as inactive.
- * @param {string} articleB - An article you want to set as inactive.
- * @param {string} articleC - An article you want to set as inactive.
+ * @param {string} tabNumberB - A second tab you want to set as inactive.
+ * @param {string} tabNumberC - A third tab you want to set as inactive.
+ * @param {string} articleA - A article you want to set as inactive.
+ * @param {string} articleB - A second article you want to set as inactive.
+ * @param {string} articleC - A third article you want to set as inactive.
  */
 function switchToInactive(tabNumberA, tabNumberB, tabNumberC, articleA, articleB, articleC) {
     tabNumberA.classList.remove('active-tab');
