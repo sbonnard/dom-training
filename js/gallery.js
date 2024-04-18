@@ -38,32 +38,32 @@ function displayProject(alt, imgSrc, projectNumber){
     document.getElementById('gallery-description').textContent = document.getElementById(projectNumber).dataset['description'];
 }
 
-// Projet 1
+// Project 1
 project1.addEventListener('mouseover', function () {
     displayProject('[alt="Projet 1"]', "img/project-1.jpg", 'project-1')
 });
 
-// Projet 2
+// Project 2
 project2.addEventListener('mouseover', function () {
     displayProject('[alt="Projet 2"]', "img/project-2.jpg", 'project-2')
 });
 
-// Projet 3
+// Project 3
 project3.addEventListener('mouseover', function () {
     displayProject('[alt="Projet 3"]', "img/project-3.jpg", 'project-3')
 });
 
-// Projet 4
+// Project 4
 project4.addEventListener('mouseover', function () {
     displayProject('[alt="Projet 4"]', "img/project-4.jpg", 'project-4')
 });
 
-// Projet 5
+// Project 5
 project5.addEventListener('mouseover', function () {
     displayProject('[alt="Projet 5"]', "img/project-5.jpg", 'project-5')
 });
 
-// Projet 6
+// Project 6
 project6.addEventListener('mouseover', function () {
     displayProject('[alt="Projet 6"]', "img/project-6.jpg", 'project-6')
 });

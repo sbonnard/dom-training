@@ -8,6 +8,23 @@ const articleTab2 = document.getElementById("tabs-tab2");
 const articleTab3 = document.getElementById("tabs-tab3");
 const articleTab4 = document.getElementById("tabs-tab4");
 
+const tabsLinksArray = document.querySelectorAll('.js-tabs-link')
+const articlesArray = document.querySelectorAll('[data-tab-content]');
+
+console.log(tabsLinksArray);
+console.log(articlesArray);
+
+// For of loop try failed
+
+// document.getElementById('tabs-links').addEventListener('click', function(){
+//     let i = 0;
+//     for (const tab of tabsLinksArray) {
+//         switchToActive(tabsLinksArray[i], articlesArray[i]);
+//     }
+//     if (tab1.classList.contains("active-tab")){
+//         tab1.classList.remove('active-tab')
+//     }
+// })
 
 /* 2 boucles for par listener
 deux tableaux
@@ -44,33 +61,21 @@ function switchToInactive(tabNumberA, tabNumberB, tabNumberC, articleA, articleB
 
 
 tab1.addEventListener('click', function (event) {
-    // What it removes and adds to itself
     switchToActive(tab1, articleTab1);
-
-    // What it removes or add to other tabs
     switchToInactive(tab2, tab3, tab4, articleTab2, articleTab3, articleTab4);
 });
 
 tab2.addEventListener('click', function (event) {
-    // What it removes and adds to itself
     switchToActive(tab2, articleTab2);
-
-    // What it removes or add to other tabs
     switchToInactive(tab1, tab3, tab4, articleTab1, articleTab3, articleTab4);
 });
 
 tab3.addEventListener('click', function (event) {
-    // What it removes and adds to itself
     switchToActive(tab3, articleTab3);
-    // What it removes or add to other tabs
     switchToInactive(tab1, tab2, tab4, articleTab1, articleTab2, articleTab4);
-
 });
 
 tab4.addEventListener('click', function (event) {
-    // What it removes and adds to itself
     switchToActive(tab4, articleTab4);
-
-    // What it removes or add to other tabs
     switchToInactive(tab1, tab2, tab3, articleTab1, articleTab2, articleTab3);
 });
