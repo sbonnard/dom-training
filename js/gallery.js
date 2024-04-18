@@ -25,36 +25,43 @@ const project5 = document.querySelector('[data-title="Pleasure and pain"]');
 const project6 = document.querySelector('[data-title="Focus event on form elements"]');
 
 const image = document.getElementById('gallery-picture');
+
+// Projet 1
 project1.addEventListener('mouseover', function () {
     document.getElementById('gallery-title').textContent = document.querySelector('[alt="Projet 1"]').alt;
     image.src = "img/project-1.jpg";
     document.getElementById('gallery-description').textContent = document.getElementById('project-1').dataset['description'];
 });
 
+// Projet 2
 project2.addEventListener('mouseover', function () {
     document.getElementById('gallery-title').textContent = document.querySelector('[alt="Projet 2"]').alt;
     image.src = "img/project-2.jpg";
     document.getElementById('gallery-description').textContent = document.getElementById('project-2').dataset['description'];
 });
 
+// Projet 3
 project3.addEventListener('mouseover', function () {
     document.getElementById('gallery-title').textContent = document.querySelector('[alt="Projet 3"]').alt;
     image.src = "img/project-3.jpg";
     document.getElementById('gallery-description').textContent = document.getElementById('project-3').dataset['description'];
 });
 
+// Projet 4
 project4.addEventListener('mouseover', function () {
     document.getElementById('gallery-title').textContent = document.querySelector('[alt="Projet 4"]').alt;
     image.src = "img/project-4.jpg";
     document.getElementById('gallery-description').textContent = document.getElementById('project-4').dataset['description'];
 });
 
+// Projet 5
 project5.addEventListener('mouseover', function () {
     document.getElementById('gallery-title').textContent = document.querySelector('[alt="Projet 5"]').alt;
     image.src = "img/project-5.jpg";
     document.getElementById('gallery-description').textContent = document.getElementById('project-5').dataset['description'];
 });
 
+// Projet 6
 project6.addEventListener('mouseover', function () {
     document.getElementById('gallery-title').textContent = document.querySelector('[alt="Projet 6"]').alt;
     image.src = "img/project-6.jpg";

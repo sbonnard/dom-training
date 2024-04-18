@@ -9,65 +9,69 @@ const articleTab3 = document.getElementById("tabs-tab3");
 const articleTab4 = document.getElementById("tabs-tab4");
 
 
+/* 2 boucles for par listener
+deux tableaux
+une fonction add
+listener sur le ul */
+
+/**
+ * Adds the .active-tab CSS class to a tab.
+ * @param {string} tabNumber - The tab you want to set as active.
+ * @param {string} tabArticle - The article you want to set as active.
+ */
+function switchToActive(tabNumber, tabArticle) {
+    tabNumber.classList.add("active-tab");
+    tabArticle.classList.add("active-tab");
+    tabArticle.classList.remove('hidden');
+}
+
+/**
+ * Sets the tabs and articles to inactive.
+ * @param {string} tabNumberA - A tab you want to set as inactive.
+ * @param {string} tabNumberB - A tab you want to set as inactive.
+ * @param {string} tabNumberC - A tab you want to set as inactive.
+ * @param {string} articleA - An article you want to set as inactive.
+ * @param {string} articleB - An article you want to set as inactive.
+ * @param {string} articleC - An article you want to set as inactive.
+ */
+function switchToInactive(tabNumberA, tabNumberB, tabNumberC, articleA, articleB, articleC) {
+    tabNumberA.classList.remove('active-tab');
+    tabNumberB.classList.remove('active-tab');
+    tabNumberC.classList.remove('active-tab');
+    articleA.classList.add('hidden');
+    articleB.classList.add('hidden');
+    articleC.classList.add('hidden');
+}
+
+
 tab1.addEventListener('click', function (event) {
     // What it removes and adds to itself
-    tab1.classList.add("active-tab");;
-    articleTab1.classList.add('active-tab');;
-    articleTab1.classList.remove('hidden');;
+    switchToActive(tab1, articleTab1);
 
     // What it removes or add to other tabs
-    tab2.classList.remove('active-tab');
-    articleTab2.classList.add('hidden');
-    tab3.classList.remove('active-tab');
-    articleTab3.classList.add('hidden');
-    tab4.classList.remove('active-tab');
-    articleTab4.classList.add('hidden');
-})
+    switchToInactive(tab2, tab3, tab4, articleTab2, articleTab3, articleTab4);
+});
 
 tab2.addEventListener('click', function (event) {
     // What it removes and adds to itself
-    tab2.classList.add("active-tab");;
-    articleTab2.classList.add('active-tab');;
-    articleTab2.classList.remove('hidden');;
+    switchToActive(tab2, articleTab2);
 
     // What it removes or add to other tabs
-    tab1.classList.remove('active-tab');
-    articleTab1.classList.add('hidden');
-    tab3.classList.remove('active-tab');
-    articleTab3.classList.add('hidden');
-    tab4.classList.remove('active-tab');
-    articleTab4.classList.add('hidden');
-})
+    switchToInactive(tab1, tab3, tab4, articleTab1, articleTab3, articleTab4);
+});
 
 tab3.addEventListener('click', function (event) {
     // What it removes and adds to itself
-    tab3.classList.add("active-tab");;
-    articleTab3.classList.add('active-tab');;
-    articleTab3.classList.remove('hidden');;
-
+    switchToActive(tab3, articleTab3);
     // What it removes or add to other tabs
-    tab1.classList.remove('active-tab');
-    articleTab1.classList.add('hidden');
-    tab2.classList.remove('active-tab');
-    articleTab2.classList.add('hidden');
-    tab4.classList.remove('active-tab');
-    articleTab4.classList.add('hidden');
-})
+    switchToInactive(tab1, tab2, tab4, articleTab1, articleTab2, articleTab4);
+
+});
 
 tab4.addEventListener('click', function (event) {
     // What it removes and adds to itself
-    tab4.classList.add("active-tab");;
-    articleTab4.classList.add('active-tab');;
-    articleTab4.classList.remove('hidden');;
+    switchToActive(tab4, articleTab4);
 
     // What it removes or add to other tabs
-    tab1.classList.remove('active-tab');
-    articleTab1.classList.add('hidden');
-    tab2.classList.remove('active-tab');
-    articleTab2.classList.add('hidden');
-    tab3.classList.remove('active-tab');
-    articleTab3.classList.add('hidden');
-})
-
-
-console.log(document.getElementById('tab2'));
+    switchToInactive(tab1, tab2, tab3, articleTab1, articleTab2, articleTab3);
+});
