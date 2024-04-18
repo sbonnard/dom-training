@@ -1,17 +1,7 @@
 // console.log(document.getElementById('project-2').dataset['title']);
 // console.log(document.getElementById('project-2').dataset['description']);
 
-
-const project1 = document.querySelector('[data-title="Consectetur adipiscing elit"]');
-const project2 = document.querySelector('[data-title="Voluptatem accusantium"]');
-const project3 = document.querySelector('[data-title="Denouncing pleasure and praising pain"]');
-const project4 = document.querySelector('[data-title="Ducimus qui blanditiis praesentium"]');
-const project5 = document.querySelector('[data-title="Pleasure and pain"]');
-const project6 = document.querySelector('[data-title="Focus event on form elements"]');
-
-
-const description = document.getElementById('project-2').dataset['description'];
-
+// For of loop try
 
 // const image = document.querySelectorAll('.thumbs-img');
 // console.log(image[1]);
@@ -25,17 +15,14 @@ const description = document.getElementById('project-2').dataset['description'];
 // }
 
 
+// My way too long version
 
-
-
-
-
-
-
-
-
-
-
+const project1 = document.querySelector('[data-title="Consectetur adipiscing elit"]');
+const project2 = document.querySelector('[data-title="Voluptatem accusantium"]');
+const project3 = document.querySelector('[data-title="Denouncing pleasure and praising pain"]');
+const project4 = document.querySelector('[data-title="Ducimus qui blanditiis praesentium"]');
+const project5 = document.querySelector('[data-title="Pleasure and pain"]');
+const project6 = document.querySelector('[data-title="Focus event on form elements"]');
 
 const image = document.getElementById('gallery-picture');
 project1.addEventListener('mouseover', function () {

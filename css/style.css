@@ -1,6 +1,10 @@
+/* Exercice 1 trainings */
+
 .text-hidden {
     display: none;
 }
+
+/* Exercice 4 trainings */
 
 .btn--blue {
     background-color: blue;
@@ -12,4 +16,10 @@
 
 .btn--green{
     background-color: green;
+}
+
+/* Tab Exercice */
+
+.tabs-link.active {
+background-color: white;
 }
