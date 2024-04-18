@@ -1,5 +1,5 @@
 // console.log(document.getElementById('project-2').dataset['title']);
-console.log(document.getElementById('project-2').dataset['description']);
+// console.log(document.getElementById('project-2').dataset['description']);
 
 
 const project1 = document.querySelector('[data-title="Consectetur adipiscing elit"]');
@@ -9,18 +9,35 @@ const project4 = document.querySelector('[data-title="Ducimus qui blanditiis pra
 const project5 = document.querySelector('[data-title="Pleasure and pain"]');
 const project6 = document.querySelector('[data-title="Focus event on form elements"]');
 
-const image = document.getElementById('gallery-picture');
 
 const description = document.getElementById('project-2').dataset['description'];
 
-console.log(image);
 
 // const image = document.querySelectorAll('.thumbs-img');
+// console.log(image[1]);
+
+// let i=0;
+
+// for(const projects of image){
+//     image[i].addEventListener("mouseover", function(event){
+//         image.src = image[i]['src']
+//     })
+// }
 
 
-// console.log(project2);
-// console.log(document.querySelector('[alt="Projet 2"]').alt);
 
+
+
+
+
+
+
+
+
+
+
+
+const image = document.getElementById('gallery-picture');
 project1.addEventListener('mouseover', function () {
     document.getElementById('gallery-title').textContent = document.querySelector('[alt="Projet 1"]').alt;
     image.src = "img/project-1.jpg";
