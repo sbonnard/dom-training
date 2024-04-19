@@ -38,7 +38,7 @@ listener sur le ul */
 function switchToActive(tabNumber, tabArticle) {
     tabNumber.classList.add("active-tab");
     tabArticle.classList.add("active-tab");
-    tabArticle.classList.remove('hidden');
+    tabArticle.classList.remove('text-hidden');
 }
 
 /**
@@ -54,9 +54,9 @@ function switchToInactive(tabNumberA, tabNumberB, tabNumberC, articleA, articleB
     tabNumberA.classList.remove('active-tab');
     tabNumberB.classList.remove('active-tab');
     tabNumberC.classList.remove('active-tab');
-    articleA.classList.add('hidden');
-    articleB.classList.add('hidden');
-    articleC.classList.add('hidden');
+    articleA.classList.add('text-hidden');
+    articleB.classList.add('text-hidden');
+    articleC.classList.add('text-hidden');
 }
 
 
